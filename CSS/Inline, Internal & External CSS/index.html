@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style in css</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #internal-css-example {
+            color: lightsalmon;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Three ways To Add CSS IN HTML</h1>
+    <div>
+        <ol>
+            <li>Inline CSS</li>
+            <li>Internal CSS</li>
+            <li>External CSS</li>
+        </ol>
+    </div>
+    <!-- This is inline CSS: -->
+    <p style="color: blueviolet; font-size: 20px; font-weight: bold; background-color: lightyellow;">
+        Inline CSS is used to apply styles directly to an HTML element using the "style" attribute. 
+    </p>
+   
+    <p id="internal-css-example">
+        This paragraph demonstrates internal CSS. Its style is defined in the &lt;style&gt; section using a unique ID selector.
+    </p>
+    <p id="external-css-example">
+        This paragraph is styled using an external CSS file. The styles are defined in a separate CSS file linked to this HTML document.
+    </p>
+    </style>
+</body>
+</html>
