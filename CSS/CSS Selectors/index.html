@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Selector</title>
+    <style>
+        /* Element Selector  */
+        div {
+            color: brown;
+        }
+
+        /* Class Selector  */
+        .two {
+            color: blue;
+        }
+
+        /* Id Selector */
+        #three {
+            color: green;
+        }
+
+        /* Child Selectors  */
+        main>span {
+            color: rgb(220, 27, 159);
+        }
+
+        /* Descendant Selector  */
+        ul li {
+            color: orange;
+        }
+
+        /* Universal Selector */
+        * {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+        }
+
+        /* Attribute Selector */
+        a[href] {
+            color: rgb(248, 45, 65);
+        }
+
+        /* Pseudo Selector */
+        a:hover{
+            color: silver;
+        }
+        a:visited{
+            color: purple;
+        }
+        a:link{
+            color: rgb(236, 31, 158);
+        }
+        a:active{
+            background-color: rgb(255, 0, 0);
+        }
+        main:first-child {
+            background-color: rgb(255, 255, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <main class='one'>
+        <h1>CSS Selectors</h1>
+        <p class="two">This is a paragraph with class "two".</p>
+        <div id="three">This is a div with id "three".</div>
+        <span class="four">This is a span with class "four".</span>
+        <ul>
+            <li class="five">List item one</li>
+            <li class="five">List
+    </main>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, facere debitis. Inventore, debitis. Voluptatum
+        obcaecati minus pariatur beatae perspiciatis impedit quidem cum quae libero blanditiis.
+    </div>
+    <ul>
+        <li>
+            Parent Item
+            <ul>
+                <li>Child Item</li>
+            </ul>
+        </li>
+    </ul>
+    <a href="https://www.google.com" target="_blank">Go to Google</a>
+    <a href="https://www.facebook.com" target="_blank">Go to Facebook</a>
+</body>
+
+</html>
