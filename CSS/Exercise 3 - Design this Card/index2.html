@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Card Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            ;
+        }
+
+        body {
+            background-color: gray;
+            padding: 45px;
+        }
+
+        .card {
+            background-color: white;
+            width: 250px;
+            border-radius: 18px;
+            /* padding: top right botthm left; */
+            padding: 0 0 34px 0;
+        }
+
+        .image {
+            padding: 10px 0 0 30px;
+        }
+
+        .image img {
+            border-radius: 10px;
+            border:none;
+        }
+        .capsules{
+            padding: 0 0 0 50px;
+        }
+        .capsules span{
+            border: 1px solid gray;
+            border-radius: 7px;
+            padding: 0px 6px;
+            font-size: 8.5px;
+        }
+
+        .content{
+            /* for comments if we write only two arguments in padding it will take the first value for top and bottom and second value for left and right */
+            /* padding: 10px 20px; */
+
+            padding: 10px 10px 10px 45px;
+            
+        }
+        .content p{
+            font-size: 10px;
+            color: gray;
+        }
+        .button {
+            text-align: center;
+            
+        }
+        .button button{
+            border: none;
+            background-color: rgb(191, 226, 251);
+            color: rgb(14, 150, 234);
+            border-radius: 15px;
+            padding: 5px 10px;
+            margin-top: 7px;
+            font-size: 10px;
+        }
+        .button button:hover{
+            background-color: rgb(149, 207, 248);
+            color: rgb(10, 136, 214);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="image">
+
+            <img width="190"
+                src="https://wallpapers.com/images/hd/krishna-ji-and-radha-in-gold-ensembles-t0n2wk5lwbxopy3e.jpg"
+                alt="">
+        </div>
+        <div class="capsules">
+            <span>Radhey</span>
+            <span>Krishna</span>
+        </div>
+        <div class="content">
+            <h2>Radhey Radhey</h2>
+            <p>Radhey Radhey Radhey Radhey Radhey Radhey Radhey Radhey Radhey Radhey Radhey Radhey Radhey Radhey Radhey
+                Radhey Radhey Radhey Radhey Radhey Radhey Radhey Radhey Radhey Radhey Radhey Radhey Radhey </p>
+        </div>
+        <div class="button">
+            <button>Read More</button>
+        </div>
+    </div>
+</body>
+
+</html>
