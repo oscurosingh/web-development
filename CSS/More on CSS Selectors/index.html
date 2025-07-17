@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on CSS Selectors</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            
+        }
+        [data-color="primary"]{
+            padding-top: 45px;
+        }
+        .box:first-child {
+            background-color: lightblue;
+        }
+        
+        .box:nth-child(2) {
+            background-color: lightgreen;
+        }
+
+        .box::first-line {
+            color: rgb(200, 29, 43);
+            font-weight: bold;
+        }
+        .box::first-letter{
+            color: aliceblue;
+            font-size: 50px;
+        }
+
+        .boxes{
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+            background-color: lightgray;
+        }
+        .boxes::before {
+            content: "Boxes Section";
+            color: blue;
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .boxes::after {
+            content: "End of Boxes Section";
+            color: red;
+            /* display box means that it will not take up space in the layout . */
+            /* display: block; */
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+       /* selection means the text that is selected by the user. */
+        ::selection {
+            background-color: black;
+            color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div data-color="primary"  class="box">I am First Box</div>
+        <div class="box">Hey I am a box2
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem blanditiis quos laborum nulla necessitatibus quod est tempore dolorem. Et necessitatibus corrupti velit illum assumenda voluptates delectus, quibusdam architecto nam dolore!
+        </div>
+        <div class="box">Hey I am a box3</div>
+        <input type="text" placeholder="Type Your Name">
+    </div>
+</body>
+</html>
