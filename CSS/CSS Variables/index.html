@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS VARIABLE</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            --primary-color: #f82626;
+            --secondary-color: #2ecc71;
+            --text-color: #333;
+            --font-family:courier, monospace;
+            --defop: 0.65;
+        }
+        .nav{
+            background-color: var(--secondary-color);
+        }
+         ul li{
+            opacity: var(--defop);
+            list-style: none;
+            padding: var(--defpad);
+            border: 2px solid var(--seccolor);
+            font-family: var(--font-family);
+        }
+        ul li:first-child {
+            color: var(--primary-color);
+            /* color variable nhi hai */
+            background-color: var(--color, blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About </li>
+            <li>Contact</li>
+        </ul>
+    </div>
+</body>
+</html>
