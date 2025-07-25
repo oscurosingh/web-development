@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 05</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: black;
+            height: auto;
+            border: 2px solid white;
+            position: absolute;
+        }
+
+        nav {
+            background-color: pink;
+            height: 100px;
+            width: 100%;
+            position: sticky;
+            top: 0;
+        }
+
+        .box1 {
+
+            background-color: green;
+            height: 500px;
+            
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 20px 30px;
+           
+        }
+        .box1  >  .box1_1 {
+            background-color: rgb(235, 158, 158);
+            height: 300px;
+            width: 40%;
+        }
+
+        .box1  >  .box1_2 {
+            background-color: rgb(47, 125, 198);
+            height: 300px;
+            width: 40%;
+        }
+        .box2 {
+            background-color: black;
+            height: 300px;
+            
+           color: white;
+           font-size: 50px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+           border: 2px solid white;
+           border-radius: 90px;
+           margin: 20px 120px;
+           text-align: center;
+           padding: 50px;
+           overflow:visible;
+        }
+        .circle {
+            background-color: orange;
+            width: 50px;
+            height: 50px;
+            border-radius: 70%;
+            position: fixed;
+            right: 0;
+            top: 70%;
+            /* transform: translateY(-50%); */
+         
+        }
+        footer {
+            background-color: grey;
+            height: 80px;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+
+        </nav>
+        <div class="box1">
+            <div class="box1_1"></div>
+            <div class="box1_2"></div>
+        </div>
+        <div class="box2">
+            Welcome to the CSS Exercise 05!
+            Lorem ipsum dolor sit amet consectetur.
+        </div>
+        <div class="circle"></div>
+        <footer>
+            <div class="footer-content">
+                <p>Footer Content</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
