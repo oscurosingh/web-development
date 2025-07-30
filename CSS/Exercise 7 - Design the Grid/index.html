@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .logo img {
+            width: 164px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-family: "Segoe UI";
+        }
+
+        .right ul {
+            display: flex;
+            gap: 34px;
+        }
+
+        .right ul li {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .right ul li span {
+            padding: 0 5px;
+        }
+
+        main {
+            margin-top: 100px;
+            /* background-color: azure; */
+            font-family: 'Segoe UI';
+            display: flex;
+            justify-content: center;
+        }
+
+        .language {
+
+
+            /* border: 2px solid black; */
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            row-gap: 25px;
+            column-gap: 25px;
+        }
+
+        .item {
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 10px;
+height: 30vh;
+width: 20vw;
+        }
+
+        .btn-download {
+            font-weight: bold;
+            background-color: #5cb85c;
+            color: white;
+            /* Removing Underline */
+            padding: 8px 16px;
+            text-decoration: none;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .btn-download:hover {
+            background-color: #4cae4c;
+        }
+
+        .lang {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1.3em;
+            margin-top: 10px;
+        }
+
+        .sub {
+            color: #222;
+            /* margin-top: -8px; */
+        }
+
+        .sha-title {
+
+            color: #222;
+        }
+
+        .sha {
+            /* font-size: 0.6rem; */
+            
+            font-size: 8px;
+            color: #222;
+            word-break:break-all;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/Dark-logo.png" alt="">
+            </div>
+            <div class="right">
+                <ul>
+                    <li><span>Products </span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li><span>Pricing </span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li><span>Resources </span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li><span>About Us </span><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
+                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </li>
+                    <li>
+                        <img src="https://www.ultraedit.com/wp-content/themes/Divi_Child/img/Lang.png" alt="">
+            </div>
+
+            </li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="language">
+            <div class="item item1">
+                <h3 class="lang">English</h3>
+                <p class="sub"></p>
+                <a href="#" class="btn-download">Download 64-bit</a>
+                <p class="sha-title">SHA256</p>
+                <p class="sha"> C4983F9B141AF56BF80BD426492455A240E33CC914A7BE164AB20A610BE6E4DD
+                </p>
+            </div>
+            <div class="item item2">
+                <h3 class="lang">Deutsch</h3>
+                <p class="sub">German</p>
+                <a href="#" class="btn-download">Download 64-bit</a>
+                <p class="sha-title">SHA256</p>
+                <p class="sha">C4983F9B141AF56BF80BD426492455A240E33CC914A7BE164AB20A610BE6E4DD
+                </p>
+            </div>
+            <div class="item item3 ">
+                <h3 class="lang">Italiano</h3>
+                <p class="sub">Italian</p>
+                <a href="#" class="btn-download">Download 64-bit</a>
+                <p class="sha-title">SHA256</p>
+                <p class="sha">C4983F9B141AF56BF80BD426492455A240E33CC914A7BE164AB20A610BE6E4DD
+                </p>
+            </div>
+            <div class="item item4">
+                <h3 class="lang">Español</h3>
+                <p class="sub">Spanish</p>
+                <a href="#" class="btn-download">Download 64-bit</a>
+                <p class="sha-title">SHA256</p>
+                <p class="sha">C4983F9B141AF56BF80BD426492455A240E33CC914A7BE164AB20A610BE6E4DD
+                </p>
+            </div>
+            <div class="item item5">
+                <h3 class="lang">français</h3>
+                <p class="sub">French</p>
+                <a href="#" class="btn-download">Download 64-bit</a>
+                <p class="sha-title">SHA256</p>
+                <p class="sha">C4983F9B141AF56BF80BD426492455A240E33CC914A7BE164AB20A610BE6E4DD
+                </p>
+            </div>
+            <div class="item item6">
+                <h3 class="lang">Português brasileiro</h3>
+                <p class="sub">Brazilian Portuguese</p>
+                <a href="#" class="btn-download">Download 64-bit</a>
+                <p class="sha-title">SHA256</p>
+                <p class="sha">C4983F9B141AF56BF80BD426492455A240E33CC914A7BE164AB20A610BE6E4DD
+                </p>
+            </div>
+            <div class="item item7 ">
+                <h3 class="lang">日本</h3>
+                <p class="sub">Japanese</p>
+                <a href="#" class="btn-download">Download 64-bit</a>
+                <p class="sha-title">SHA256</p>
+                <p class="sha">C4983F9B141AF56BF80BD426492455A240E33CC914A7BE164AB20A610BE6E4DD
+                </p>
+            </div>
+            <div class="item item8">
+                <h3 class="lang">한국어</h3>
+                <p class="sub">Korean</p>
+                <a href="#" class="btn-download">Download 64-bit</a>
+                <p class="sha-title">SHA256</p>
+                <p class="sha"> C4983F9B141AF56BF80BD426492455A240E33CC914A7BE164AB20A610BE6E4DD
+                </p>
+            </div>
+            <div class="item item9">
+                <h3 class="lang">华语</h3>
+                <p class="sub">Chinese</p>
+                <a href="#" class="btn-download">Download 64-bit</a>
+                <p class="sha-title">SHA256</p>
+                <p class="sha"> C4983F9B141AF56BF80BD426492455A240E33CC914A7BE164AB20A610BE6E4DD
+                </p>
+            </div>
+            <div class="item item10">
+                <h3 class=" lang">華語</h3>
+                <p class="sub">Traditional Chinese</p>
+                <a href="#" class="btn-download">Download 64-bit</a>
+                <p class="sha-title">SHA256</p>
+                <p class="sha"> C4983F9B141AF56BF80BD426492455A240E33CC914A7BE164AB20A610BE6E4DD
+                </p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
