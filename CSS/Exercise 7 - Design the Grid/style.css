@@ -1,0 +1,70 @@
+.logo1 {
+  width: 164px;
+}
+
+body {
+  font-family: "Segoe UI";
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Segoe UI";
+}
+
+.right ul {
+  display: flex;
+  gap: 34px;
+}
+
+.right ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.right ul li span {
+  padding: 0 5px;
+}
+.first {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+  margin: 70px;
+}
+.first span {
+  font-size: 48px;
+}
+
+.btn {
+  min-height: 48px;
+  min-width: 256px;
+  text-align: center;
+  background-color: #00b6d1;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  border: 2px solid;
+  cursor: pointer;
+}
+.second {
+  max-width: 50vw;
+  margin: auto;
+}
+.download{
+    display: flex;
+    font-family: sans-serif;
+    gap: 10px;
+    align-items: center;
+   
+}
+.download img {
+  width: 55px;
+}
+.small {
+  font-weight: 400;
+  font-size: 60%;
+}
