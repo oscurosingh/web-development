@@ -18,6 +18,6 @@ if (random>0.1) {
     alert(`The result is ${eval(`${a} ${b} ${c}`)}`)
 }
 else {
-     c = obj[c]
+     b = obj[b]
     alert(`The result is ${eval(`${a} ${b} ${c}`)}`) 
     }
