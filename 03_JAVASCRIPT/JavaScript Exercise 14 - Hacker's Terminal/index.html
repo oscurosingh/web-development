@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Terminal</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+        /* @ is used to import external stylesheets and apply CSS at-rules like @keyframes, @media, etc. */
+        body {
+            background-color: #0a0a0a;
+            color: #00ff00;
+            font-family: 'Roboto Mono', monospace;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        #terminal {
+            min-height: 100vh;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .dot {
+            display: inline-block;
+            opacity: 1;
+        }
+        
+        .dot.blink {
+            animation: blink 0.6s infinite;
+        }
+        
+        .dot.blink:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes blink { 
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+        /* Animation for the terminal blinking dots  */
+    </style>
+</head>
+
+<body>
+    <div id="terminal"></div>
+    
+    <script>
+        let text = ["Initializing Hacking",
+            "Reading your Files",
+            "Password files Detected",
+            "Sending all passwords and personal files to server",
+            "Cleaning up"]
+        
+        const terminal = document.getElementById('terminal');
+        let index = 0;
+        
+        function displayMessages() {
+            if (index < text.length) {
+                const delay = Math.random() * 6000 + 1000; // Random delay 1-7 seconds
+                
+                setTimeout(() => {
+                    document.querySelectorAll('.dot.blink').forEach(dot => dot.classList.remove('blink'));
+                    const line = document.createElement('div');
+                    line.innerHTML = text[index] + '<span class="dot blink">.</span><span class="dot blink">.</span><span class="dot blink">.</span>';
+                    terminal.appendChild(line);
+                    index++;
+                    if (index === text.length) {
+                        setTimeout(() => {
+                            document.querySelectorAll('.dot.blink').forEach(dot => dot.classList.remove('blink'));
+                        }, 1200);
+                    }
+                    displayMessages();
+                }, delay);
+            }
+        }
+        
+        displayMessages();
+    </script>
+</body>
+
+</html>
