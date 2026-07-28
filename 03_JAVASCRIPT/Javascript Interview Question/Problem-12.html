@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // The Token Manager: You are developing a user authentication system, and you need to manage user authentication tokens. Implement a function named setAuthToken that takes an authentication token and sets it in localStorage with an expiration time.
+
+        function setAuthToken(token, expirationTimeInMinutes) {
+            const expirationTime = new Date().getTime() + expirationTimeInMinutes * 60 * 1000; // new Date() creates a Date object to call .getTime() method; Convert minutes to millisecondsvar Date: DateConstructor
+
+            const authTokenData = {
+                token: token,
+                expiration: expirationTime
+            };
+            localStorage.setItem('authToken', JSON.stringify(authTokenData));
+        }
+
+        // Example usage:
+        setAuthToken('knd90bf2of[/fen.v;', .5); // Set token with 30
+    </script>
+</body>
+</html>

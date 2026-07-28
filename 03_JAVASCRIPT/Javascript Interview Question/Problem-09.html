@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Problem 09 - Async Orders</title>
+</head>
+
+<body>
+    <script>
+        // The Asynchronous Shopper: Imagine you are building an online shopping application. Write an asynchronous function called placeOrder that simulates placing an order and returns a promise. The promise should resolve with an order confirmation message after a random delay.
+        function placeOrder() {
+            return new Promise((resolve) => {
+                const delay = Math.floor(Math.random() * 2000) + 1000; // 1000–2999 ms (1–3s)
+                setTimeout(() => {
+                    const orderId = Math.floor(Math.random() * 1000000);
+                    resolve(`Order confirmed. Order ID: ${orderId}`);
+                }, delay);
+            });
+        }
+
+        // Example usage (single):
+        placeOrder().then(msg => console.log(msg));
+
+        // Concurrent multiple orders:
+        Promise.all(Array.from({ length: 5 }, () => placeOrder()))
+            .then(results => console.log('Concurrent results:', results));
+
+        // Sequential multiple orders:
+        (async () => {
+            for (let i = 0; i < 5; i++) {
+                console.log(await placeOrder());
+            }
+        })();
+    </script>
+</body>
+
+</html>
