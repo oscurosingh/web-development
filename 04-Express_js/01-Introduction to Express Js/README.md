@@ -1,4 +1,4 @@
-# Express.js
+d# Express.js
 
 
 ## What is Express.js?
@@ -10,11 +10,13 @@ Express.js is a fast and minimalist web framework for Node.js. It helps you buil
 - Supports middleware
 - Works well with APIs and frontend apps
 
-## Install Express
+## Installing Express 4
 ```bash
 npm init -y
-npm install express
+npm install express@4
 ```
+
+`express@4` installs the stable Express 4 release used throughout these examples.
 
 ## Create a basic server
 ```js
@@ -95,10 +97,46 @@ npm run dev
 npx nodemon app.js
 ```
 
-## Notes about Nodemon
+## Why Nodemon?
 - Nodemon automatically restarts the server when files change.
-- It is very useful during development.
-- It saves time instead of manually stopping and restarting the server.
+- This makes development faster because you do not need to manually stop and restart the server after each change.
+- Use Nodemon during development; use `node app.js` when you only need to run the server normally.
+
+## Request parameters and queries
+
+### Route parameters
+Route parameters are values included in the URL path. Define one with `:` and read it from `req.params`.
+
+```js
+app.get('/users/:id', (req, res) => {
+  res.send(`User ID: ${req.params.id}`);
+});
+```
+
+For `/users/42`, `req.params.id` is `"42"`.
+
+### Query parameters
+Query parameters come after `?` in a URL and are available on `req.query`.
+
+```js
+app.get('/products', (req, res) => {
+  const { category, page = 1 } = req.query;
+  res.json({ category, page });
+});
+```
+
+For `/products?category=books&page=2`, `req.query.category` is `"books"` and `req.query.page` is `"2"`.
+
+## Static files
+Use `express.static()` to serve files such as CSS, images, and browser JavaScript from a folder.
+
+```js
+const path = require('path');
+
+app.use(express.static(path.join(__dirname, 'public')));
+```
+
+With this setup, a file at `public/css/style.css` is available at `/css/style.css`.
 
 ## Common Express methods
 - `app.get()` → read data
